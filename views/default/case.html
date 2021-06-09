@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Success Case</title>
+<title>heder_nav-menu</title>
+<link rel="stylesheet" type="text/css" href="/public/default/css/reset.css" />
+<link rel="stylesheet" type="text/css" href="/public/default/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/public/default/css/heder_nav-menu.css"/>
+<link rel="stylesheet" type="text/css" href="/public/default/css/successful_case.css"/>
+
+    <link rel="stylesheet" type="text/css" href="/public/default/css/bootstrap.min.css"/>
+
+
+</head>
+
+<body>
+
+
+<include src="./public/header.html"></include>
+
+<div id="header_nav-wrapper">
+    <div class="header_nav">
+    	<h2>Success Case &#160; <span>Write satisfactory answers to customers time and time again and create valuable products
+APP development</span></h2>
+    
+    
+    </div>
+
+
+
+</div>
+
+<div id="header_title-wrapper">
+
+    <div class="header_cate">
+		{{each catelist}}
+        		<a {{if pid==$value._id}}class="active"{{/if}} href="/case?pid={{@$value._id}}">{{$value.title}}</a>
+		{{/each}}
+    </div>
+
+
+</div>
+
+
+<div id="main_wrapper">
+
+    
+    <div class="main">
+	    <ul class="clear">
+
+			{{each articlelist}}
+	    
+				<li>
+
+						<a href="content/{{@$value._id}}"><img src="{{$value.img_url}}" /></a>
+
+						<p>{{$value.title}}</p>
+
+
+				</li>
+
+			{{/each}}
+	    
+	    </ul>
+
+
+
+        <div id="page" class="pagination"></div>
+    </div>
+
+
+
+</div>
+
+
+
+<div id="footer-wrapper">
+            <div class="footer-inner">
+                <p>
+                    <a href="#">Home Page</a>&nbsp;&nbsp;|&nbsp;
+                    <a href="#">About US</a>&nbsp;&nbsp;|&nbsp;
+                    <a href="#">Product Display</a>&nbsp;&nbsp;|&nbsp;
+                    <a href="#">Customer Case</a>&nbsp;&nbsp;|&nbsp;
+                    <a href="#">News</a>&nbsp;&nbsp;|&nbsp;
+                    <a href="#">Help Center</a>&nbsp;&nbsp;|&nbsp;
+                    <a href="#">Solutions</a>&nbsp;&nbsp;|&nbsp;
+                    <a href="#">Contact US</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                </p>
+                <p>Copyright © 2021 Tao Peng</p>
+                <p>Tel: 613-800-0376 E-mail: peng0041@algonquinlive.com</p>
+            </div>
+</div>
+
+
+<script src="../../public/default/js/jquery-1.10.2.min.js"></script>
+<script src="../../public/default/js/jqPaginator.js"></script>
+
+<script>
+
+    $('#page').jqPaginator({
+        // totalPages: {{totalPages}},
+        totalPages: (totalPages),
+        visiblePages: 6,
+        currentPage: (page),
+        onPageChange: function (num, type) {
+
+            if(type=='change'){
+                 if (pid)
+                     location.href="/case?pid=(pid)&page="+num;
+
+                 else
+                      location.href="/case?page="+num;
+                //  (/if)
+            }
+        }
+    });
+</script>
+
+
+</body>
+</html>

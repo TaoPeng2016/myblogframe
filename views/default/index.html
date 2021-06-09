@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Koa Cms Demo Station</title>
+  <link rel="stylesheet" type="text/css" href="/public/default/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="/public/default/css/common.css" />
+  <link rel="stylesheet" type="text/css" href="/public/default/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="/public/default/css/swiper.min.css" />
+  <script type="text/javascript" src="/public/default/js/swiper.min.js">
+  </script>
+
+</head>
+
+<body>
+
+
+
+  <include src="./public/header.html"></include>
+
+
+  <div id="banner-wrapper">
+
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+
+        {{each focus}}
+        <div class="swiper-slide">
+
+          <img src="{{$value.pic}}" alt="{{$value.title}}" />
+        </div>
+        {{/each}}
+
+      </div>
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-prev swiper-button-white"></div>
+      <div class="swiper-button-next swiper-button-white"></div>
+
+    </div>
+
+
+  </div>
+  <div id="main">
+    <div id="main_center-wrapper">
+      <div class="main_center">
+        <h2>Our Advantages </h2>
+        <h3>Unique design, international quality products, meticulous service</h3>
+        <ul>
+          <li>
+            <h3> Our Design</h3>
+            <h4>From the plan to completion, every step is followed by an excellent design. It is the most sincere
+              obligation to create the most suitable work for you.</h4><img
+              src="/public/default/images/mian2_image1.jpg" />
+          </li>
+          <li>
+            <h3> Our Design</h3>
+            <h4>From the plan to completion, every step is followed by an excellent design. It is the most sincere
+              obligation to create the most suitable work for you.</h4><img
+              src="/public/default/images/mian2_image2.jpg" />
+          </li>
+          <li style=" margin-right:0;">
+            <h3> Our Design</h3>
+            <h4>From the plan to completion, every step is followed by an excellent design. It is the most sincere
+              obligation to create the most suitable work for you.</h4><img
+              src="/public/default/images/mian2_image3.jpg" />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="main_bottom-wrapper">
+      <div class="main_bottom">
+        <h2>Successful Cases </h2>
+        <h3 style="font-weight: bold">It is my wish to create a harmonious environment to best suit your style and
+          needs.</h3>
+        <div class="main_bottom-nav clear">
+
+          <a href="#" style=" font-weight:900; background:#f75a53;">Service <img
+              src="/public/default/images/jiao.png" /></a>
+          <a href="#">Education</a>
+          <a href="#">Real Estate</a>
+          <a href="#">Energy</a>
+        </div>
+        <div class="main_bottom-table">
+          <ul class="clear">
+
+            <li><a href="#"><img src="/public/default/images/mian3_image1.jpg" alt="&nbsp;" /></a></li>
+            <li><a href="#"><img src="/public/default/images/mian3_image2.jpg" alt="&nbsp;" /></a></li>
+            <li style=" margin-right:0"><a href="#"><img src="/public/default/images/mian3_image3.jpg"
+                  alt="&nbsp;" /></a></li>
+            <li><a href="#" style=" margin-bottom:0"><img src="/public/default/images/mian3_image4.jpg"
+                  alt="&nbsp;" /></a></li>
+            <li><a href="#" style=" margin-bottom:0"><img src="/public/default/images/mian3_image5.jpg"
+                  alt="&nbsp;" /></a></li>
+            <li style=" margin-right:0; margin-bottom:0"><a href="#"><img src="/public/default/images/mian3_image6.jpg"
+                  alt="&nbsp;" /></a></li>
+
+
+
+          </ul>
+
+
+
+        </div>
+
+
+
+
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+  <div id="footer-wrapper">
+    <div class="footer-inner">
+      <p>
+        <a href="#">Home Page</a>&nbsp;&nbsp;|&nbsp;
+        <a href="#">About US</a>&nbsp;&nbsp;|&nbsp;
+        <a href="#">Product Display</a>&nbsp;&nbsp;|&nbsp;
+        <a href="#">Customer Case</a>&nbsp;&nbsp;|&nbsp;
+        <a href="#">News</a>&nbsp;&nbsp;|&nbsp;
+        <a href="#">Help Center</a>&nbsp;&nbsp;|&nbsp;
+        <a href="#">Solutions</a>&nbsp;&nbsp;|&nbsp;
+        <a href="#">Contact US</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      </p>
+      <p>Copyright © 2021 Tao Peng</p>
+      <p>Tel: 613-800-0376 E-mail: peng0041@algonquinlive.com</p>
+    </div>
+  </div>
+
+  <script>
+    var mySwiper = new Swiper('.swiper-container', {
+      autoplay: true,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+
+    })
+  </script>
+
+
+</body>
+
+</html>
