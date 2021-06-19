@@ -6,7 +6,7 @@ Myblogframe
     |
     |___.git                            
     |___.vscode
-    |___model
+    |
     |___node_module                                    //npm modules
     |
     │___package.json                                   // required modules and configuration information
